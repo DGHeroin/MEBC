@@ -3,10 +3,20 @@
 
 #include "IObject.h"
 
+/**
+ * @brief      Class for manager.
+ */
 class IManager : public IObject
 {
 public:
+    /**
+     * @brief      { ctor }
+     */
     IManager();
+
+    /**
+     * @brief      Destroys the object.
+     */
     ~IManager();
 
 };

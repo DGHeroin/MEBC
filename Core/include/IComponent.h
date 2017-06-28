@@ -3,10 +3,19 @@
 
 #include "IObject.h"
 
+/**
+ * @brief      Class for component.
+ */
 class IComponent : public IObject
 {
 public:
+    /**
+     * @brief      { ctor }
+     */
     IComponent();
+    /**
+     * @brief      Destroys the object.
+     */
     virtual ~IComponent(){}
 
 };

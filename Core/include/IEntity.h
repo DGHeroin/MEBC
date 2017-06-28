@@ -7,6 +7,9 @@
 #include "IBehaviour.h"
 #include "IComponent.h"
 
+/**
+ * @brief      Class for entity.
+ */
 class IEntity : public IObject
 {
 public:
@@ -89,6 +92,13 @@ public:
         return nullptr;
     }
 
+    /**
+     * @brief      Gets the behaviours.
+     *
+     * @tparam     T     { description }
+     *
+     * @return     The behaviours.
+     */
     template<typename T>
     std::vector<T*> GetBehaviours() {
         std::vector<T*> targets;
@@ -102,7 +112,14 @@ public:
     }
 
 private:
+    /**
+     * { Behaviours }
+     */
     std::list<IBehaviour*> m_behavioures;
+
+    /**
+     * { Components }
+     */
     std::list<IComponent*> m_components;
 };
 

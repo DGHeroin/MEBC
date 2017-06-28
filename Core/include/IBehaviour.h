@@ -4,10 +4,20 @@
 #include "IObject.h"
 #include <list>
 
+/**
+ * @brief      Class for behaviour.
+ */
 class IBehaviour : public IObject
 {
 public:
+    /**
+     * @brief      { ctor }
+     */
     IBehaviour();
+
+    /**
+     * @brief      Destroys the object.
+     */
     virtual ~IBehaviour() {}
 };
 

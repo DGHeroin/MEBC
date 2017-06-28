@@ -6,10 +6,20 @@
 #include "Book.h"
 #include <list>
 
+/**
+ * @brief      Class for library bookcase.
+ */
 class LibraryBookcase : public IComponent
 {
 public:
+    /**
+     * @brief      { ctor }
+     */
     LibraryBookcase();
+
+    /**
+     * { Book's Pool }
+     */
     std::list<Book*> bookPool;
 };
 

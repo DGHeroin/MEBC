@@ -4,10 +4,20 @@ using namespace std;
 
 #include "StudentLentBook.h"
 
+/**
+ * @brief      Constructs the object.
+ *
+ * @param[in]  name  The name
+ */
 Student::Student(std::string name) {
     m_name = name;
 }
 
+/**
+ * @brief      { function_description }
+ *
+ * @param[in]  id    The identifier
+ */
 void Student::NeedToRead(std::string id) {
     StudentLentBook *lentBook = GetBehaviour<StudentLentBook>();
     if (lentBook) {

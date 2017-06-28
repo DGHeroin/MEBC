@@ -6,6 +6,14 @@ using namespace std;
 #include "Student/StudentLentBook.h"
 #include "LibraryManager/LibraryManager.h"
 
+/**
+ * @brief      { function_description }
+ *
+ * @param[in]  argc  The argc
+ * @param      argv  The argv
+ *
+ * @return     { description_of_the_return_value }
+ */
 int main(int argc, char const *argv[]) {
     cout << "Demo Hello World!" << endl;
 

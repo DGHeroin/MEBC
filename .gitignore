@@ -1,0 +1,3 @@
+# Ignore CMake files
+build
+.DS_Store

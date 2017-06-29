@@ -1,4 +1,5 @@
 #include "EngineManager.h"
+#include "ScriptBehaviour.h"
 #include <unistd.h>
 #include <iostream>
 using namespace std;
@@ -38,13 +39,20 @@ void EngineManager::Loop() {
                     m_behavioursInvakeDestroy.push_back(behaviour);
                 }
             }
+            m_behavioursInvakeStart.clear();
             // Call Update
+            std::list<ScriptBehaviour*> nextUpdateScripts;
+            nextUpdateScripts.clear();
             for(ScriptBehaviour* behaviour : m_behavioursInvakeUpdate) {
                 behaviour->Update();
                 if (behaviour->IsDestroyed()) {
                     m_behavioursInvakeDestroy.push_back(behaviour);
+                } else {
+                    nextUpdateScripts.push_back(behaviour);
                 }
             }
+            m_behavioursInvakeUpdate.clear();
+            m_behavioursInvakeUpdate = nextUpdateScripts;
             // Call Destroy
             for(ScriptBehaviour* behaviour : m_behavioursInvakeDestroy) {
                 behaviour->Destroy();

@@ -1,9 +1,10 @@
 #ifndef __ENGINE_MANAGER_H__
 #define __ENGINE_MANAGER_H__
 
-#include "ScriptBehaviour.h"
 #include <list>
 #include <ctime>
+
+class ScriptBehaviour;
 
 /**
  * @brief      Class for engine manager.

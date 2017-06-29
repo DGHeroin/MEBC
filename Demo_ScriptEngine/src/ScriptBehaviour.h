@@ -3,6 +3,7 @@
 
 #include "mebc.h"
 
+class EngineManager;
 /**
  * @brief      Class for script behaviour.
  */
@@ -12,7 +13,7 @@ public:
     /**
      * @brief      { ctor }
      */
-    ScriptBehaviour();
+    ScriptBehaviour(EngineManager *manager);
 
     /**
      * @brief      { Start Callback }
@@ -52,6 +53,11 @@ private:
      * { It's this Class need to Destroy }
      */
     bool m_isDestroy;
+
+    /**
+     * { EngineManager }
+     */
+    EngineManager *m_engineManager;
 };
 
 #endif // SCRIPT_BEHAVIOUR_H
